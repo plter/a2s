@@ -1,13 +1,5 @@
-# a2s
-
-Python async function to sync function, Convert python async function to a sync function for calling from a normal
-function in an existing event loop
-
-# Usage
-
-```python
 import asyncio
-from src.a2s import sync
+from a2s import sync
 
 
 @sync
@@ -27,4 +19,3 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-```
