@@ -1,9 +1,8 @@
+import asyncio
+
+
 def sync(f):
     def wrapper(*args, **kwargs):
-        r = f(*args, **kwargs)
-        try:
-            r.send(None)
-        except StopIteration as e:
-            pass
+        asyncio.get_event_loop().create_task(f(*args, **kwargs))
 
     return wrapper
