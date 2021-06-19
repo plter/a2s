@@ -7,7 +7,7 @@ function in an existing event loop
 
 ```python
 import asyncio
-from src.a2s import sync
+from a2s import sync
 
 
 @sync
